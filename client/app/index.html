@@ -1,0 +1,435 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="futebasApp" ng-controller="MainController">
+	  <div class="fundo">
+	  </div>
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <nav class="navbar navbar-default" style="position: fixed; z-index:2; width: 100%;">
+	  <div class="container-fluid">
+		  <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <div style="float: left; margin-top: 10px;" class="fa fa-soccer-ball-o fa-spin fa-3x"></div>
+        </a>
+      </div>
+		<p class="navbar-text" style="float: left; font-weight: bold; font-size: 20px;">
+			Futebol de Campo 2016
+		</p>
+		<p class="navbar-text" style="float: right; font-weight: bold;font-size: 20px;">Vagas: 30/30</p>
+	  </div>
+	</nav>
+	<div class="bs-example" data-example-id="thumbnails-with-custom-content" style="position: absolute; top: 100px; width: 100%;">
+			<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
+				<div class="thumbnail painelInscricao goleiro-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Goleiro</h3>
+						<p style="text-align: center" >{{nomejogador}}</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(1)" class="btn btn-default" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao goleiro-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Goleiro</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(1)" class="btn btn-default" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao zagueiro-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+							<h3 style="text-align: center">Zagueiro</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao zagueiro-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Zagueiro</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao zagueiro-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Zagueiro</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
+				<div class="thumbnail painelInscricao zagueiro-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Zagueiro</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao zagueiro-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Zagueiro</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao zagueiro-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Zagueiro</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao zagueiro-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Zagueiro</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao zagueiro-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Zagueiro</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
+				<div class="thumbnail painelInscricao lateral-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Lateral</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(3)" class="btn btn-success" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao lateral-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Lateral</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(3)" class="btn btn-success" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao lateral-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Lateral</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(3)" class="btn btn-success" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao lateral-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Lateral</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(3)" class="btn btn-success" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao volante-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Volante</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(4)" class="btn btn-info" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
+				<div class="thumbnail painelInscricao volante-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Volante</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(4)" class="btn btn-info" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao volante-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Volante</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(4)" class="btn btn-info" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao meia-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Meia</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(5)" class="btn btn-warning" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao meia-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Meia</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(5)" class="btn btn-warning" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao meia-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Meia</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(5)" class="btn btn-warning" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
+				<div class="thumbnail painelInscricao meia-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Meia</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(5)" class="btn btn-warning" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao meia-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Meia</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(5)" class="btn btn-warning" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao meia-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Meia</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(5)" class="btn btn-warning" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao atacante-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Atacante</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(5)" class="btn btn-danger" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao atacante-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Atacante</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(5)" class="btn btn-danger" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
+				<div class="thumbnail painelInscricao atacante-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Atacante</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(5)" class="btn btn-danger" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao atacante-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Atacante</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(5)" class="btn btn-danger" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao atacante-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Atacante</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(5)" class="btn btn-danger" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao atacante-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Atacante</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(5)" class="btn btn-danger" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+				<div class="thumbnail painelInscricao atacante-color">
+					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<div class="caption">
+						<h3 style="text-align: center">Atacante</h3>
+						<p style="text-align: center">asdasdadadsad.</p>
+						<p style="text-align: center ">
+							<a style="width: 100%;" ng-click="add(5)" class="btn btn-danger" role="button">Inscrever-se</a>
+						</p>
+					</div>
+				</div>
+			</div>
+	</div>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+		<script src="scripts/modal.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+		<script src="scripts/controllers/cadastrar-jogador.js"></script>
+		<script src="scripts/services/cadastrar-jogador.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
