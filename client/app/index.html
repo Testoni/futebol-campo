@@ -18,11 +18,6 @@
   <body ng-app="futebasApp" ng-controller="MainController">
 	  <div class="fundo">
 	  </div>
-    <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <!-- Add your site or application content here -->
     <nav class="navbar navbar-default" style="position: fixed; z-index:2; width: 100%;">
 	  <div class="container-fluid">
 		  <div class="navbar-header">
@@ -33,371 +28,312 @@
 		<p class="navbar-text" style="float: left; font-weight: bold; font-size: 20px;">
 			Futebol de Campo 2016
 		</p>
-		<p class="navbar-text" style="float: right; font-weight: bold;font-size: 20px;">Vagas: 30/30</p>
 	  </div>
 	</nav>
-	<div class="bs-example" data-example-id="thumbnails-with-custom-content" style="position: absolute; top: 100px; width: 100%;">
-			<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
-				<div class="thumbnail painelInscricao goleiro-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Goleiro</h3>
-						<p style="text-align: center" >{{nomejogador}}</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(1)" class="btn btn-default" role="button">Inscrever-se</a>
-						</p>
-					</div>
+	<form name="myForm">
+		<div class="bs-example" data-example-id="thumbnails-with-custom-content" style="position: absolute; top: 100px; width: 100%;">
+				<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
+					<imagem-directive
+						fut-label="Goleiro"
+						fut-src="images/kidiaba.jpg"
+						fut-object="jogador1"
+						fut-numero="1"
+						fut-posicao="GOLEIRO"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao goleiro-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Goleiro</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(1)" class="btn btn-default" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Goleiro"
+						fut-src="images/higuita.jpg"
+						fut-object="jogador2"
+						fut-numero="2"
+						fut-posicao="GOLEIRO"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao zagueiro-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-							<h3 style="text-align: center">Zagueiro</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Zagueiro"
+						fut-src="images/pepe.jpg"
+						fut-object="jogador3"
+						fut-numero="3"
+						fut-posicao="ZAGUEIRO"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao zagueiro-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Zagueiro</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Zagueiro"
+						fut-src="images/durval.jpg"
+						fut-object="jogador4"
+						fut-numero="4"
+						fut-posicao="ZAGUEIRO"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao zagueiro-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Zagueiro</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Zagueiro"
+						fut-src="images/gum.jpg"
+						fut-object="jogador5"
+						fut-numero="5"
+						fut-posicao="ZAGUEIRO"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
-				<div class="thumbnail painelInscricao zagueiro-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Zagueiro</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
+					<imagem-directive
+						fut-label="Zagueiro"
+						fut-src="images/andreluiz.jpg"
+						fut-object="jogador6"
+						fut-numero="6"
+						fut-posicao="ZAGUEIRO"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao zagueiro-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Zagueiro</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Zagueiro"
+						fut-src="images/zuniga.jpg"
+						fut-object="jogador7"
+						fut-numero="7"
+						fut-posicao="ZAGUEIRO"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao zagueiro-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Zagueiro</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Zagueiro"
+						fut-src="images/thiago.jpg"
+						fut-object="jogador8"
+						fut-numero="8"
+						fut-posicao="ZAGUEIRO"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao zagueiro-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Zagueiro</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Zagueiro"
+						fut-src="images/david.jpg"
+						fut-object="jogador9"
+						fut-numero="9"
+						fut-posicao="ZAGUEIRO"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao zagueiro-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Zagueiro</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(2)" class="btn btn-primary" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Zagueiro"
+						fut-src="images/zaguerio.jpg"
+						fut-object="jogador10"
+						fut-numero="10"
+						fut-posicao="ZAGUEIRO"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
-				<div class="thumbnail painelInscricao lateral-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Lateral</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(3)" class="btn btn-success" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
+					<imagem-directive
+						fut-label="Lateral"
+						fut-src="images/marcelo.jpg"
+						fut-object="jogador11"
+						fut-numero="11"
+						fut-posicao="LATERAL"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao lateral-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Lateral</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(3)" class="btn btn-success" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Lateral"
+						fut-src="images/douglas.jpg"
+						fut-object="jogador12"
+						fut-numero="12"
+						fut-posicao="LATERAL"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao lateral-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Lateral</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(3)" class="btn btn-success" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Lateral"
+						fut-src="images/apodi.jpg"
+						fut-object="jogador13"
+						fut-numero="13"
+						fut-posicao="LATERAL"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao lateral-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Lateral</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(3)" class="btn btn-success" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Lateral"
+						fut-src="images/para.jpg"
+						fut-object="jogador14"
+						fut-numero="14"
+						fut-posicao="LATERAL"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao volante-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Volante</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(4)" class="btn btn-info" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Volante"
+						fut-src="images/richarlison.jpg"
+						fut-object="jogador15"
+						fut-numero="15"
+						fut-posicao="VOLANTE"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
-				<div class="thumbnail painelInscricao volante-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Volante</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(4)" class="btn btn-info" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
+					<imagem-directive
+						fut-label="Volante"
+						fut-src="images/amaral.jpg"
+						fut-object="jogador16"
+						fut-numero="16"
+						fut-posicao="VOLANTE"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao volante-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Volante</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(4)" class="btn btn-info" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Volante"
+						fut-src="images/josue.jpg"
+						fut-object="jogador17"
+						fut-numero="17"
+						fut-posicao="VOLANTE"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao meia-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Meia</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(5)" class="btn btn-warning" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Meia"
+						fut-src="images/dejong.jpg"
+						fut-object="jogador18"
+						fut-numero="18"
+						fut-posicao="MEIA"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao meia-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Meia</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(5)" class="btn btn-warning" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Meia"
+						fut-src="images/ronaldinho.jpg"
+						fut-object="jogador19"
+						fut-numero="19"
+						fut-posicao="MEIA"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao meia-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Meia</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(5)" class="btn btn-warning" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Meia"
+						fut-src="images/messi.jpg"
+						fut-object="jogador20"
+						fut-numero="20"
+						fut-posicao="MEIA"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
-				<div class="thumbnail painelInscricao meia-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Meia</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(5)" class="btn btn-warning" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
+					<imagem-directive
+						fut-label="Meia"
+						fut-src="images/ribery.jpg"
+						fut-object="jogador21"
+						fut-numero="21"
+						fut-posicao="MEIA"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao meia-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Meia</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(5)" class="btn btn-warning" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Meia"
+						fut-src="images/pirlo.jpg"
+						fut-object="jogador22"
+						fut-numero="22"
+						fut-posicao="MEIA"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao meia-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Meia</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(5)" class="btn btn-warning" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Meia"
+						fut-src="images/felipemelo.jpg"
+						fut-object="jogador23"
+						fut-numero="23"
+						fut-posicao="MEIA"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao atacante-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Atacante</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(5)" class="btn btn-danger" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Atacante"
+						fut-src="images/cacarato.jpg"
+						fut-object="jogador24"
+						fut-numero="24"
+						fut-posicao="ATACANTE"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao atacante-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Atacante</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(5)" class="btn btn-danger" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Atacante"
+						fut-src="images/valter.jpg"
+						fut-object="jogador25"
+						fut-numero="25"
+						fut-posicao="ATACANTE"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
-				<div class="thumbnail painelInscricao atacante-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Atacante</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(5)" class="btn btn-danger" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1">
+					<imagem-directive
+						fut-label="Atacante"
+						fut-src="images/adriano.jpg"
+						fut-object="jogador26"
+						fut-numero="26"
+						fut-posicao="ATACANTE"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao atacante-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Atacante</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(5)" class="btn btn-danger" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Atacante"
+						fut-src="images/fred.jpg"
+						fut-object="jogador27"
+						fut-numero="27"
+						fut-posicao="ATACANTE"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao atacante-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Atacante</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(5)" class="btn btn-danger" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Atacante"
+						fut-src="images/zelove.jpg"
+						fut-object="jogador28"
+						fut-numero="28"
+						fut-posicao="ATACANTE"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao atacante-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Atacante</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(5)" class="btn btn-danger" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Atacante"
+						fut-src="images/marinho.jpg"
+						fut-object="jogador29"
+						fut-numero="29"
+						fut-posicao="ATACANTE"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-				<div class="thumbnail painelInscricao atacante-color">
-					<img alt="100%x200" src="" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-					<div class="caption">
-						<h3 style="text-align: center">Atacante</h3>
-						<p style="text-align: center">asdasdadadsad.</p>
-						<p style="text-align: center ">
-							<a style="width: 100%;" ng-click="add(5)" class="btn btn-danger" role="button">Inscrever-se</a>
-						</p>
-					</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+					<imagem-directive
+						fut-label="Atacante"
+						fut-src="images/luizfabiano.jpg"
+						fut-object="jogador30"
+						fut-numero="30"
+						fut-posicao="ATACANTE"
+						function-add="add">
+					</imagem-directive>
 				</div>
-			</div>
-	</div>
+		</div>
+	</form>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
@@ -430,6 +366,7 @@
         <script src="scripts/controllers/main.js"></script>
 		<script src="scripts/controllers/cadastrar-jogador.js"></script>
 		<script src="scripts/services/cadastrar-jogador.js"></script>
+		<script src="scripts/directives/imagem-directive.js"></script>
         <!-- endbuild -->
 </body>
 </html>

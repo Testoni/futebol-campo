@@ -2,23 +2,17 @@
 
 var portalApp = angular.module('futebasApp');
 
-portalApp.controller('CadastroJogadorCtrl', function($scope, Modal, $modalInstance, criterios, Jogador) {
+portalApp.controller('CadastroJogadorCtrl', function($scope, Modal, $modalInstance, object, Jogador) {
+
 	$scope.jogador = new Jogador();
-	$scope.criterios = angular.copy(criterios);
+	$scope.jogador.posicao = object.posicao;
+	$scope.jogador.numero = object.numero;
 
-
-	$scope.posicoes = [
-      'Goleiro',
-      'Zagueiro',
-      'Atacante'];
-
-	$scope.salvar = function() {
-		$scope.jogador.$save(function(response){
-			$scope.nomejogador = response;
+	$scope.salvar = function(jogador) {
+		jogador.$save(function(response){
+			jogador = response;
 		});
-
-
-		$modalInstance.close();
+		$modalInstance.close(jogador);
 	};
 
 	$scope.cancelar = function() {

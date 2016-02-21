@@ -16,7 +16,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-	'ui.bootstrap'
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -25,6 +25,5 @@ angular
       });
   })
   .constant('CONFIG', {
-    hostUrl           : 'http://localhost:3000'
-
+    hostUrl: 'http://localhost:3000'
   });

@@ -9,25 +9,19 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 							<label for="nome">Nome</label>
-							<input class="form-control" type="text" required name="nome" ng-model="jogador.nome"></input>
+							<input class="form-control" type="text" ng-required="true" name="nome" ng-model="jogador.nome"></input>
 						</div>
 						<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
 							<label for="email">Email</label>
-							<input class="form-control" type="email" required name="email" ng-model="jogador.email"></input>
+							<input class="form-control" type="email" ng-required="true" name="email" ng-model="jogador.email"></input>
 						</div>
-					</div>
-					<br />
-					<div class="col-lg-5 row">
-						<select ng-model="jogador.posicao" ng-options="posicao for posicao in posicoes">
-							<option disabled selected value="">Posição</option>
-						</select>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="panel-footer">
-			<button type="button" class="btn btn-success" ng-click="salvar()">Confirmar</button>
-			<button type="button" class="btn btn-default" ng-click="dimiss()">Cancelar</button>
+			<button type="button" class="btn btn-success" ng-disabled="!jogador.nome || !jogador.email" ng-click="salvar(jogador)">Confirmar</button>
+			<button type="button" class="btn btn-default" ng-click="cancelar()">Cancelar</button>
 		</div>
 	</form>
 </div>
