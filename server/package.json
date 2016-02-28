@@ -1,0 +1,13 @@
+{
+  "name": "futebas",
+  "description": "teste",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "~latest",
+    "body-parser": "~latest",
+    "mongoose": "~latest"
+  }
+}
